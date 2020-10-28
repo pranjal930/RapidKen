@@ -1,0 +1,39 @@
+<ul class="container">
+   <div class="row">
+      <div class="col-6 offset-2">
+         <li *ngFor="let emp of Employees;let i=index">
+            <mat-card>
+               <mat-card-title-group>
+                  <div class="row">
+                     <div class="col-1">
+                        <mat-card-avatar>
+                           <mat-icon class="avatar">account_circle</mat-icon>
+                        </mat-card-avatar>
+                     </div>
+                  </div>
+                 <div class="col-10">
+                  <mat-card-title>
+                     <span class="md-title">{{emp.name}}</span>
+                  </mat-card-title>
+                  <mat-card-subtitle>
+                     <span class="md-subhead">{{emp.position}}</span>
+                  </mat-card-subtitle>
+                 </div>
+                 <div class="col-1">
+                    <mat-icon style="cursor: pointer;"(click)="onDelete(i)">clear</mat-icon>
+                 </div>
+               </mat-card-title-group>
+               <mat-card-content>
+                  <span class="about">{{emp.about}}</span><br>
+                  <div class="date"><span class="jDate">JOINING DATE: </span>{{emp.jDate}}</div>
+               </mat-card-content>
+             
+            </mat-card>
+          </li> 
+         
+      </div>
+      <div class="offset-4">
+         <button class="btn btn-primary" (click)="goToForm()">+ New Employee</button>
+      </div>
+   </div>
+</ul>

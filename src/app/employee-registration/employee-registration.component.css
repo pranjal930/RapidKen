@@ -1,0 +1,14 @@
+form{
+    margin-left: 25%;
+    height :100%;
+    width: 50%;
+    box-sizing: border-box;
+    align-content: center;
+}
+button{
+    margin-top: 2%;
+    margin-left: 40%;
+}
+.is-invalid{
+    border: 1px solid red;
+}
