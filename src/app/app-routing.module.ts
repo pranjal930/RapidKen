@@ -6,7 +6,7 @@ import { EmployeeRegistrationComponent } from './employee-registration/employee-
 const routes: Routes = [
   {path:'',component:EmployeeListComponent},
   {path:'registration',component:EmployeeRegistrationComponent},
-  { path: '**', component: EmployeeRegistrationComponent } ];
+  { path: '**', redirectTo:'/registration' } ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
