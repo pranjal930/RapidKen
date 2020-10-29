@@ -30,10 +30,11 @@ export class EmployeeService{
         }, */
     ]
     addEmployee(employee:Employee){
-        /*if(localStorage.getItem('Employees')){
+        console.log(this.employees);
+        if(localStorage.getItem('Employees')&&this.employees!==[]){
             console.log(localStorage.getItem('Employees'));
             this.employees=JSON.parse(localStorage.getItem('Employees'));
-        }*/
+        }
         this.employees.push(employee);
         localStorage.setItem('Employees',JSON.stringify(this.employees));
     }
