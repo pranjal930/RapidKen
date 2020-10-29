@@ -18,7 +18,7 @@ export class EmployeeRegistrationComponent implements OnInit {
     this.router.navigate(['/']);
   }
   OnSubmit(){
-    this.empService.employees.push(this.employee);
+    this.empService.addEmployee(this.employee);
     this.router.navigate(['']);
   }
 }
